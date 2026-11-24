@@ -1,0 +1,778 @@
+{
+  "schema": "b8g-wasi-host-launchers-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "generatedAt": "2026-11-24T22:37:07.048Z",
+  "wasiHostCore": {
+    "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+    "version": "v0.2.0",
+    "target": "wasm32-wasi",
+    "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc",
+    "size": 2662,
+    "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+    "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.2.0/holo-wasi-host-b8g.wasm",
+    "exports": [
+      "holo_wasi_b8g_abi_magic",
+      "holo_wasi_b8g_version",
+      "holo_wasi_b8g_route_app"
+    ]
+  },
+  "nativeHosts": {
+    "macos-arm64": {
+      "id": "awesome-os/wasi-host/holo-wasi-host-darwin-arm64",
+      "version": "v0.2.0",
+      "sha512": "acd0ebd1e7c26de4f7fcdbb409cdd886bce722d6f60f2603016835a6e190d6e8db2e86e96f930d497328bc9925e9f34f6b08ef9ed149331b7b7e32a0bf792c0c",
+      "size": 51784,
+      "casKey": "v11/files/ac/acd0ebd1e7c26de4f7fcdbb409cdd886bce722d6f60f2603016835a6e190d6e8db2e86e96f930d497328bc9925e9f34f6b08ef9ed149331b7b7e32a0bf792c0c-exec",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.2.0/holo-wasi-host-darwin-arm64"
+    },
+    "linux-arm64": {
+      "id": "awesome-os/wasi-host/holo-wasi-host-linux-arm64",
+      "version": "v0.2.0",
+      "sha512": "12fc093127863d0a895284de19045818d5d994a46d6cfaab00be5e5a9bb7887a6a7cf837919fa28fc22ad5ced8371a344736e5150dfa83356608caf6a9ecaa87",
+      "size": 41224,
+      "casKey": "v11/files/12/12fc093127863d0a895284de19045818d5d994a46d6cfaab00be5e5a9bb7887a6a7cf837919fa28fc22ad5ced8371a344736e5150dfa83356608caf6a9ecaa87-exec",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.2.0/holo-wasi-host-linux-arm64"
+    },
+    "linux-x64": {
+      "id": "awesome-os/wasi-host/holo-wasi-host-linux-x64",
+      "version": "v0.2.0",
+      "sha512": "57f5cf6bece5615fd04aa7ef6cbc5bcec9ab058c602dddee01692e553fd127d5d1037db968e87c9bf96e93eaa8871ee1c1f3ccac1a516410e3bb7eaa2d19282e",
+      "size": 34592,
+      "casKey": "v11/files/57/57f5cf6bece5615fd04aa7ef6cbc5bcec9ab058c602dddee01692e553fd127d5d1037db968e87c9bf96e93eaa8871ee1c1f3ccac1a516410e3bb7eaa2d19282e-exec",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.2.0/holo-wasi-host-linux-x64"
+    },
+    "win64": {
+      "id": "awesome-os/wasi-host/holo-wasi-host-windows-x64.exe",
+      "version": "v0.2.0",
+      "sha512": "6ccac8a691cb72461bf7d5345f27a93f1c52d7b76c2c5fe2d56ae58c4c14bdf2acd68c9007d40560bff3da81ad22cbe0fe7134e948b609a6dd652163fa8cf7e9",
+      "size": 24576,
+      "casKey": "v11/files/6c/6ccac8a691cb72461bf7d5345f27a93f1c52d7b76c2c5fe2d56ae58c4c14bdf2acd68c9007d40560bff3da81ad22cbe0fe7134e948b609a6dd652163fa8cf7e9-exec",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.2.0/holo-wasi-host-windows-x64.exe"
+    }
+  },
+  "summary": {
+    "totalLaunchers": 13,
+    "guiLaunchers": 5,
+    "cliLaunchers": 8
+  },
+  "launchers": {
+    "code-oss": {
+      "name": "code-oss",
+      "binary": "code-oss",
+      "repo": "awesome-os/code-oss",
+      "category": "gui",
+      "lockfileVersion": "v0.2.0",
+      "iconReleaseTag": "v0.3.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/code-oss/code-oss-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.2.0",
+          "sha512": "d47d6c5dab11c0cdc70a7e39fdf9bec7a93e8f959bc6104968453182007286bfed124d3520b3b5da17711ef2ffb253effd12f6391b96de34d2322778d33290fd",
+          "size": 44424,
+          "casKey": "v11/files/d4/d47d6c5dab11c0cdc70a7e39fdf9bec7a93e8f959bc6104968453182007286bfed124d3520b3b5da17711ef2ffb253effd12f6391b96de34d2322778d33290fd-exec",
+          "url": "https://github.com/awesome-os/code-oss/releases/download/v0.2.0/code-oss-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/code-oss/code-oss-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v0.2.0",
+          "sha512": "64f03bb311e451597cbb04c09a18d7e5b6198158c002e64ef1370f61d4441e147f92d3efd9e639de18e23a96b6b8118f91bcea6f79283ed888fcbc363f1f50f9",
+          "size": 37968,
+          "casKey": "v11/files/64/64f03bb311e451597cbb04c09a18d7e5b6198158c002e64ef1370f61d4441e147f92d3efd9e639de18e23a96b6b8118f91bcea6f79283ed888fcbc363f1f50f9-exec",
+          "url": "https://github.com/awesome-os/code-oss/releases/download/v0.2.0/code-oss-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/code-oss/code-oss-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.2.0",
+          "sha512": "2ce092dae0a845af35f4d612f609d89a997d70d49f37019d00ec0fb2d5517b50a204d40cdbc0ef9b811c202fae9cca7e8a4034492688e98fbe55460aeee34362",
+          "size": 51896,
+          "casKey": "v11/files/2c/2ce092dae0a845af35f4d612f609d89a997d70d49f37019d00ec0fb2d5517b50a204d40cdbc0ef9b811c202fae9cca7e8a4034492688e98fbe55460aeee34362-exec",
+          "url": "https://github.com/awesome-os/code-oss/releases/download/v0.2.0/code-oss-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/code-oss/code-oss.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.2.0",
+          "sha512": "1647b2090d85e058edab6858893947dde45012c7de82aec3f1ce6d4b2074a0289cb11750d6902518d993a847b49ce5a8a2048c863615f7ad1792c0263487f856",
+          "size": 121344,
+          "casKey": "v11/files/16/1647b2090d85e058edab6858893947dde45012c7de82aec3f1ce6d4b2074a0289cb11750d6902518d993a847b49ce5a8a2048c863615f7ad1792c0263487f856-exec",
+          "url": "https://github.com/awesome-os/code-oss/releases/download/v0.2.0/code-oss.exe"
+        }
+      }
+    },
+    "godot": {
+      "name": "godot",
+      "binary": "godot",
+      "repo": "awesome-os/godot",
+      "category": "gui",
+      "lockfileVersion": "v0.1.0",
+      "iconReleaseTag": "v0.2.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "wasmModule": {
+        "id": "awesome-os/godot/godot.wasm",
+        "kind": "ghost-launcher",
+        "version": "v0.1.0",
+        "sha512": "1f649890943c5e8979e85896effe889bbbf847672aebd9d9b1e3431e191c0aca9333efcd83c391fc504501fde59542ff06c3bb6af1d909d1e3d1eb345b0a8c82",
+        "size": 27876,
+        "casKey": "v11/files/1f/1f649890943c5e8979e85896effe889bbbf847672aebd9d9b1e3431e191c0aca9333efcd83c391fc504501fde59542ff06c3bb6af1d909d1e3d1eb345b0a8c82-exec",
+        "url": "https://github.com/awesome-os/godot/releases/download/v0.1.0/godot.wasm"
+      },
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/godot/godot-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "30e71eafdc97220ebee618b08660d5ca275a771326128c91125117b2d8c1e38b834f392738ade5b4b607ff4558d4a128cf7aafdc17b9e715dcd954e8c8260aec",
+          "size": 44040,
+          "casKey": "v11/files/30/30e71eafdc97220ebee618b08660d5ca275a771326128c91125117b2d8c1e38b834f392738ade5b4b607ff4558d4a128cf7aafdc17b9e715dcd954e8c8260aec-exec",
+          "url": "https://github.com/awesome-os/godot/releases/download/v0.1.0/godot-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/godot/godot-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "8384929b75b3dcc821ade6784f8e6d47d65095a27e79bafaa3014ce45b23ffbb82916ab611358e6b16fe1732c54201e76492f33877bcf122135fbbea8866271c",
+          "size": 37800,
+          "casKey": "v11/files/83/8384929b75b3dcc821ade6784f8e6d47d65095a27e79bafaa3014ce45b23ffbb82916ab611358e6b16fe1732c54201e76492f33877bcf122135fbbea8866271c-exec",
+          "url": "https://github.com/awesome-os/godot/releases/download/v0.1.0/godot-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/godot/godot-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "85351a08b2c2b8f0577e492dc63d213d850aa35ec06dac0742952902fc6cc3df59a9bef98a7385cd56571fe24998aa3214f2abba16ff220e10c19dcace57d4ae",
+          "size": 51856,
+          "casKey": "v11/files/85/85351a08b2c2b8f0577e492dc63d213d850aa35ec06dac0742952902fc6cc3df59a9bef98a7385cd56571fe24998aa3214f2abba16ff220e10c19dcace57d4ae-exec",
+          "url": "https://github.com/awesome-os/godot/releases/download/v0.1.0/godot-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/godot/godot.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "c66f7f783a960a6c2215ecc7dadd3a51583e9a5fd8eaa893f7b61a4880b8980fa8420ebc350eced213ed80fafe717ae8bb80e4b662cfe32325ae0eed69f4c662",
+          "size": 119296,
+          "casKey": "v11/files/c6/c66f7f783a960a6c2215ecc7dadd3a51583e9a5fd8eaa893f7b61a4880b8980fa8420ebc350eced213ed80fafe717ae8bb80e4b662cfe32325ae0eed69f4c662-exec",
+          "url": "https://github.com/awesome-os/godot/releases/download/v0.1.0/godot.exe"
+        },
+        "wasm32-wasi": {
+          "id": "awesome-os/godot/godot.wasm",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "1f649890943c5e8979e85896effe889bbbf847672aebd9d9b1e3431e191c0aca9333efcd83c391fc504501fde59542ff06c3bb6af1d909d1e3d1eb345b0a8c82",
+          "size": 27876,
+          "casKey": "v11/files/1f/1f649890943c5e8979e85896effe889bbbf847672aebd9d9b1e3431e191c0aca9333efcd83c391fc504501fde59542ff06c3bb6af1d909d1e3d1eb345b0a8c82-exec",
+          "url": "https://github.com/awesome-os/godot/releases/download/v0.1.0/godot.wasm"
+        }
+      }
+    },
+    "blender": {
+      "name": "blender",
+      "binary": "blender",
+      "repo": "awesome-os/blender",
+      "category": "gui",
+      "lockfileVersion": "v0.1.0",
+      "iconReleaseTag": "v0.2.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/blender/blender-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "47f827961d635078185172d56706916ac5a4462d9df7b08c78cd64b3ff60e2eeb68945efb0818086e879ae77310557b9321b1c2728a304565374bdf6dc5ef2ab",
+          "size": 43928,
+          "casKey": "v11/files/47/47f827961d635078185172d56706916ac5a4462d9df7b08c78cd64b3ff60e2eeb68945efb0818086e879ae77310557b9321b1c2728a304565374bdf6dc5ef2ab-exec",
+          "url": "https://github.com/awesome-os/blender/releases/download/v0.1.0/blender-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/blender/blender-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "316a95b96c35ffa6380ae4048f9e026cebe6697e9e662829ab14b1801185f1341c91f1c65a73d169349a66b1c9250556331774086aa8113760e162449cc789da",
+          "size": 37624,
+          "casKey": "v11/files/31/316a95b96c35ffa6380ae4048f9e026cebe6697e9e662829ab14b1801185f1341c91f1c65a73d169349a66b1c9250556331774086aa8113760e162449cc789da-exec",
+          "url": "https://github.com/awesome-os/blender/releases/download/v0.1.0/blender-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/blender/blender-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "1df9f59fd7d576314e5b10ca068c5beff903c8b44bdc4abdc3d78febc370e20a0216a9cfba17fc5fef939853dbcde2229080ecbb6b2e9f4a5a00c04fb1bb3548",
+          "size": 51808,
+          "casKey": "v11/files/1d/1df9f59fd7d576314e5b10ca068c5beff903c8b44bdc4abdc3d78febc370e20a0216a9cfba17fc5fef939853dbcde2229080ecbb6b2e9f4a5a00c04fb1bb3548-exec",
+          "url": "https://github.com/awesome-os/blender/releases/download/v0.1.0/blender-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/blender/blender.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "a86f15c83859102d2d80e318da6c31bddf1dfa836b5bd35bd636c71fdd83afcf9b0cb5e1695c9da3ff860442eff14399f6cb2ae18e583d26c5cb698ad9f13027",
+          "size": 119296,
+          "casKey": "v11/files/a8/a86f15c83859102d2d80e318da6c31bddf1dfa836b5bd35bd636c71fdd83afcf9b0cb5e1695c9da3ff860442eff14399f6cb2ae18e583d26c5cb698ad9f13027-exec",
+          "url": "https://github.com/awesome-os/blender/releases/download/v0.1.0/blender.exe"
+        }
+      }
+    },
+    "obs": {
+      "name": "obs",
+      "binary": "obs",
+      "repo": "awesome-os/obs",
+      "category": "gui",
+      "lockfileVersion": "v0.1.0",
+      "iconReleaseTag": "v0.2.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/obs/obs-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "969b46167e0d8c4b2b225456e5b0b7365887b432dc8f1d49e9d7d6349636bcd9bd23148111f735ff6a6d5da515219ee36c48067b2b33352cb653d0e8c1777d33",
+          "size": 44064,
+          "casKey": "v11/files/96/969b46167e0d8c4b2b225456e5b0b7365887b432dc8f1d49e9d7d6349636bcd9bd23148111f735ff6a6d5da515219ee36c48067b2b33352cb653d0e8c1777d33-exec",
+          "url": "https://github.com/awesome-os/obs/releases/download/v0.1.0/obs-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/obs/obs-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "00496b47ba434a11dca2bfe4b1997918de590eb50b25503a63c16961721a6c17072fc223105fa523b2c84bc08a29ab7063ac2095ea155b737b4ffc12c22091cc",
+          "size": 37848,
+          "casKey": "v11/files/00/00496b47ba434a11dca2bfe4b1997918de590eb50b25503a63c16961721a6c17072fc223105fa523b2c84bc08a29ab7063ac2095ea155b737b4ffc12c22091cc-exec",
+          "url": "https://github.com/awesome-os/obs/releases/download/v0.1.0/obs-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/obs/obs-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "42ce2f0477b4b97ca14e5265d6db6b1f8016d338cffa6175fc7df9fa6d3a8dd61f9f2dbb9e217182a4b686727baa82c24013f55f23773420051d274f8bac33c5",
+          "size": 51920,
+          "casKey": "v11/files/42/42ce2f0477b4b97ca14e5265d6db6b1f8016d338cffa6175fc7df9fa6d3a8dd61f9f2dbb9e217182a4b686727baa82c24013f55f23773420051d274f8bac33c5-exec",
+          "url": "https://github.com/awesome-os/obs/releases/download/v0.1.0/obs-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/obs/obs.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "1e62a4ec4dd881f3c138e2b3a1214e46fa27f0955d55ccab28466eb01bad02240fd090479984debdd3817d0020457b8ea0d58916d9356f8f0c06373cd9ca696d",
+          "size": 119296,
+          "casKey": "v11/files/1e/1e62a4ec4dd881f3c138e2b3a1214e46fa27f0955d55ccab28466eb01bad02240fd090479984debdd3817d0020457b8ea0d58916d9356f8f0c06373cd9ca696d-exec",
+          "url": "https://github.com/awesome-os/obs/releases/download/v0.1.0/obs.exe"
+        }
+      }
+    },
+    "brave": {
+      "name": "brave",
+      "binary": "brave",
+      "repo": "awesome-os/brave",
+      "category": "gui",
+      "lockfileVersion": "v0.1.0",
+      "iconReleaseTag": "v0.2.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/brave/brave-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "df485c4700fc09008c59295466e4e7cc8c090607b6afd00b6b9b5b1d22165dfe4842ac22a250fed7e967251027dc9b95adadb19bb94585c0fa206f69bc8f346e",
+          "size": 43344,
+          "casKey": "v11/files/df/df485c4700fc09008c59295466e4e7cc8c090607b6afd00b6b9b5b1d22165dfe4842ac22a250fed7e967251027dc9b95adadb19bb94585c0fa206f69bc8f346e-exec",
+          "url": "https://github.com/awesome-os/brave/releases/download/v0.1.0/brave-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/brave/brave-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "5efa013b42d1ea00dd3bffd02089e300f91bfcee31762241699fc56a347e8cc5668fd0e2e98b3187e090a72089b5144c7d9ad488aa7f2e64b5640faebe098303",
+          "size": 37040,
+          "casKey": "v11/files/5e/5efa013b42d1ea00dd3bffd02089e300f91bfcee31762241699fc56a347e8cc5668fd0e2e98b3187e090a72089b5144c7d9ad488aa7f2e64b5640faebe098303-exec",
+          "url": "https://github.com/awesome-os/brave/releases/download/v0.1.0/brave-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/brave/brave-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "32a91e5f47a6c2574d38b2aaf207eb3918d47ed82bdcba95020f9526f2470c0c4423f259bf765b9c6fa4e0c05a08ab6e4722e4cd65603c665dd472f335180d88",
+          "size": 51568,
+          "casKey": "v11/files/32/32a91e5f47a6c2574d38b2aaf207eb3918d47ed82bdcba95020f9526f2470c0c4423f259bf765b9c6fa4e0c05a08ab6e4722e4cd65603c665dd472f335180d88-exec",
+          "url": "https://github.com/awesome-os/brave/releases/download/v0.1.0/brave-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/brave/brave.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "382641b4e253cab6f032a39ab60413fec0b43adb6b217cf982075442ec55091519d08e32e9e76e6cd2548c92b50c43085b574ab24157478c75842656d3e55a42",
+          "size": 118784,
+          "casKey": "v11/files/38/382641b4e253cab6f032a39ab60413fec0b43adb6b217cf982075442ec55091519d08e32e9e76e6cd2548c92b50c43085b574ab24157478c75842656d3e55a42-exec",
+          "url": "https://github.com/awesome-os/brave/releases/download/v0.1.0/brave.exe"
+        }
+      }
+    },
+    "node": {
+      "name": "node",
+      "binary": "node",
+      "repo": "awesome-os/node",
+      "category": "cli",
+      "lockfileVersion": "v0.3.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/node/node-linux-arm64",
+          "kind": "bin",
+          "version": "v0.3.0",
+          "sha512": "a9349025b325e6fec58681c08dac316151ba3ab957b005dbc6354a27bf1a709292eb57616cb061a44cac7020baffd588d0cfb2645190804f9d76bffda3b0058e",
+          "size": 1184120,
+          "casKey": "v11/files/a9/a9349025b325e6fec58681c08dac316151ba3ab957b005dbc6354a27bf1a709292eb57616cb061a44cac7020baffd588d0cfb2645190804f9d76bffda3b0058e-exec",
+          "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/node/node-linux-x64",
+          "kind": "bin",
+          "version": "v0.3.0",
+          "sha512": "a9b294a22021db74aa7a6aebdca710687a7c51635e37c2bebd838ea4d4c538d67c6441b794b6c7f8f6d5b88cb5ecc869cc25172c2a1da1c3da3822a45f546770",
+          "size": 1119368,
+          "casKey": "v11/files/a9/a9b294a22021db74aa7a6aebdca710687a7c51635e37c2bebd838ea4d4c538d67c6441b794b6c7f8f6d5b88cb5ecc869cc25172c2a1da1c3da3822a45f546770-exec",
+          "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/node/node-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.3.0",
+          "sha512": "03d56a3fef992873d14bf66bcbb032e43fcb0df08672bd19ccc90062e3cf60e7b60883e7c60fc9007ddabb8a23560defe29d6d54cc4b67409cc668504aeae1d6",
+          "size": 52032,
+          "casKey": "v11/files/03/03d56a3fef992873d14bf66bcbb032e43fcb0df08672bd19ccc90062e3cf60e7b60883e7c60fc9007ddabb8a23560defe29d6d54cc4b67409cc668504aeae1d6-exec",
+          "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/node/node.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.3.0",
+          "sha512": "42e0d97895807ec77cebf8bfd2f87ebee5785d563da885f0489bb2ddb6cc857e41a1de723c8d6909454ae87a7a07ec09ff739da234292f028107ff74599a7620",
+          "size": 179200,
+          "casKey": "v11/files/42/42e0d97895807ec77cebf8bfd2f87ebee5785d563da885f0489bb2ddb6cc857e41a1de723c8d6909454ae87a7a07ec09ff739da234292f028107ff74599a7620-exec",
+          "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node.exe"
+        }
+      }
+    },
+    "pnpm": {
+      "name": "pnpm",
+      "binary": "pnpm",
+      "repo": "awesome-os/pnpm",
+      "category": "cli",
+      "lockfileVersion": "v12.23.0-cas.1",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/pnpm/pnpm-ghost-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v12.23.0-cas.1",
+          "sha512": "afa673a9a64c6ee2356d8887426fa4dbabc83d46d911cf8cd039c05ec521df8c655fdfab06790d8a52a75823600428434aaef72ec21a39ae330f9002e326e07b",
+          "size": 67496,
+          "casKey": "v11/files/af/afa673a9a64c6ee2356d8887426fa4dbabc83d46d911cf8cd039c05ec521df8c655fdfab06790d8a52a75823600428434aaef72ec21a39ae330f9002e326e07b-exec",
+          "url": "https://github.com/awesome-os/pnpm/releases/download/v12.23.0-cas.1/pnpm-ghost-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/pnpm/pnpm-ghost-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v12.23.0-cas.1",
+          "sha512": "eba6ee65a5264096b3bedf9e0c0e556545eac1808bde9edb2199708c96e2233ce8aa6c45b5a077ecf965ab7161a0a641cf4f6726a47d113ebc518ffb4e986c7a",
+          "size": 14464,
+          "casKey": "v11/files/eb/eba6ee65a5264096b3bedf9e0c0e556545eac1808bde9edb2199708c96e2233ce8aa6c45b5a077ecf965ab7161a0a641cf4f6726a47d113ebc518ffb4e986c7a-exec",
+          "url": "https://github.com/awesome-os/pnpm/releases/download/v12.23.0-cas.1/pnpm-ghost-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/pnpm/pnpm-ghost-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v12.23.0-cas.1",
+          "sha512": "d830df2e033e64150e29de99a16b30f901d7940f2e2b0a9d3d02d6dad2063cc8dc64f053a0eefa7c39c3120c60458e6725949b7da64cd0f7e9b3c7683e8b7202",
+          "size": 34568,
+          "casKey": "v11/files/d8/d830df2e033e64150e29de99a16b30f901d7940f2e2b0a9d3d02d6dad2063cc8dc64f053a0eefa7c39c3120c60458e6725949b7da64cd0f7e9b3c7683e8b7202-exec",
+          "url": "https://github.com/awesome-os/pnpm/releases/download/v12.23.0-cas.1/pnpm-ghost-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/pnpm/pnpm-ghost-windows-x64.exe",
+          "kind": "ghost-launcher",
+          "version": "v12.23.0-cas.1",
+          "sha512": "6b3a4c158e07c3fbc75a8d9c0cdc2de644caeef9b9b1c401f9bd2fd4e8bd6794708ecbbe6110873e8e798cda225d0886f5292ed41bc00579589d765ed37a68b5",
+          "size": 154624,
+          "casKey": "v11/files/6b/6b3a4c158e07c3fbc75a8d9c0cdc2de644caeef9b9b1c401f9bd2fd4e8bd6794708ecbbe6110873e8e798cda225d0886f5292ed41bc00579589d765ed37a68b5-exec",
+          "url": "https://github.com/awesome-os/pnpm/releases/download/v12.23.0-cas.1/pnpm-ghost-windows-x64.exe"
+        }
+      }
+    },
+    "cargo": {
+      "name": "cargo",
+      "binary": "cargo",
+      "repo": "awesome-os/cargo",
+      "category": "cli",
+      "lockfileVersion": "v0.1.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-x64": {
+          "id": "awesome-os/cargo/cargo-linux-x86_64",
+          "kind": "bin",
+          "version": "v0.1.0",
+          "sha512": "520b88ce4f1cc81ed62b46af41416a1b2d0732bf6fb3a8cf874681b8cd90897abe9ca861150a773df41fc2fff02aa75b2db982f1d949cece8ac70fb32b230230",
+          "size": 42178760,
+          "casKey": "v11/files/52/520b88ce4f1cc81ed62b46af41416a1b2d0732bf6fb3a8cf874681b8cd90897abe9ca861150a773df41fc2fff02aa75b2db982f1d949cece8ac70fb32b230230-exec",
+          "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/cargo-linux-x86_64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/cargo/cargo-macos-aarch64",
+          "kind": "bin",
+          "version": "v0.1.0",
+          "sha512": "d8f3df0a7f3463fc2139bd5ca22cc8016f08c54040eb994b8780f2e6f575e86c2bf685b0ce47336429597a1848907105d6fff9cd9010ecafaa10bd982c1bf115",
+          "size": 34326512,
+          "casKey": "v11/files/d8/d8f3df0a7f3463fc2139bd5ca22cc8016f08c54040eb994b8780f2e6f575e86c2bf685b0ce47336429597a1848907105d6fff9cd9010ecafaa10bd982c1bf115-exec",
+          "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/cargo-macos-aarch64"
+        },
+        "win64": {
+          "id": "awesome-os/cargo/cargo-windows-x86_64.exe",
+          "kind": "bin",
+          "version": "v0.1.0",
+          "sha512": "4f4b4fa02201554a001ba6c70aab12d2137228735612bd6337091be2adbc3fe6f328c1e10be59dcd9c7025444ae567615c59ab51365c7d30e5099b4d160f0a8f",
+          "size": 33363456,
+          "casKey": "v11/files/4f/4f4b4fa02201554a001ba6c70aab12d2137228735612bd6337091be2adbc3fe6f328c1e10be59dcd9c7025444ae567615c59ab51365c7d30e5099b4d160f0a8f-exec",
+          "url": "https://github.com/awesome-os/cargo/releases/download/v0.1.0/cargo-windows-x86_64.exe"
+        }
+      }
+    },
+    "uv": {
+      "name": "uv",
+      "binary": "uv",
+      "repo": "awesome-os/uv",
+      "category": "cli",
+      "lockfileVersion": "v0.1.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-x64": {
+          "id": "awesome-os/uv/uv-linux-x86_64",
+          "kind": "bin",
+          "version": "v0.1.0",
+          "sha512": "4739a28e033884e7bc44c78c7d1c8279fcdad78acb6a6bce7ededad0557086e729aca288b3eef4153ad0b60206016cc135d474cc580818ca1b80413008323ec9",
+          "size": 45313616,
+          "casKey": "v11/files/47/4739a28e033884e7bc44c78c7d1c8279fcdad78acb6a6bce7ededad0557086e729aca288b3eef4153ad0b60206016cc135d474cc580818ca1b80413008323ec9-exec",
+          "url": "https://github.com/awesome-os/uv/releases/download/v0.1.0/uv-linux-x86_64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/uv/uv-macos-aarch64",
+          "kind": "bin",
+          "version": "v0.1.0",
+          "sha512": "a920aa8caa3095bfaffb61f86ac5406255437df67e042f91670887edf9fd0af207cbeaf63dce9b0d51c876cee5883b80f37cd5a1e092b6e2df4379d6f6311326",
+          "size": 32698352,
+          "casKey": "v11/files/a9/a920aa8caa3095bfaffb61f86ac5406255437df67e042f91670887edf9fd0af207cbeaf63dce9b0d51c876cee5883b80f37cd5a1e092b6e2df4379d6f6311326-exec",
+          "url": "https://github.com/awesome-os/uv/releases/download/v0.1.0/uv-macos-aarch64"
+        },
+        "win64": {
+          "id": "awesome-os/uv/uv-windows-x86_64.exe",
+          "kind": "bin",
+          "version": "v0.1.0",
+          "sha512": "e520470603b0a218556766ab89b227ac7d54dd2bf0fb1b82708cb8e669b411db7707003cf30ef89842364aac5a1680bf8a3dd3c516e907709def8fa551b47f28",
+          "size": 38304256,
+          "casKey": "v11/files/e5/e520470603b0a218556766ab89b227ac7d54dd2bf0fb1b82708cb8e669b411db7707003cf30ef89842364aac5a1680bf8a3dd3c516e907709def8fa551b47f28-exec",
+          "url": "https://github.com/awesome-os/uv/releases/download/v0.1.0/uv-windows-x86_64.exe"
+        }
+      }
+    },
+    "dotnet": {
+      "name": "dotnet",
+      "binary": "dotnet",
+      "repo": "awesome-os/dotnet",
+      "category": "cli",
+      "lockfileVersion": "v0.1.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "wasmModule": {
+        "id": "awesome-os/dotnet/dotnet.wasm",
+        "kind": "ghost-launcher",
+        "version": "v0.1.0",
+        "sha512": "4fdb516b4581ae9a9bea0cfc5ec074e29e8d306ed619e5df38b180c37cbf743a9b57d4e171eb95aa97ae174b6148f254e1d9360b95ca341d30f93da75c1cc36c",
+        "size": 36588,
+        "casKey": "v11/files/4f/4fdb516b4581ae9a9bea0cfc5ec074e29e8d306ed619e5df38b180c37cbf743a9b57d4e171eb95aa97ae174b6148f254e1d9360b95ca341d30f93da75c1cc36c-exec",
+        "url": "https://github.com/awesome-os/dotnet/releases/download/v0.1.0/dotnet.wasm"
+      },
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/dotnet/dotnet-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "4581f00789c4a1eaeaecfd99a8ddfa333157f7ba4fe30e7cbbb8a562ee187ced18031530ebd7278f15d2e202b54c2d10825f7d9a9677d9749763c69b87e23218",
+          "size": 47472,
+          "casKey": "v11/files/45/4581f00789c4a1eaeaecfd99a8ddfa333157f7ba4fe30e7cbbb8a562ee187ced18031530ebd7278f15d2e202b54c2d10825f7d9a9677d9749763c69b87e23218-exec",
+          "url": "https://github.com/awesome-os/dotnet/releases/download/v0.1.0/dotnet-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/dotnet/dotnet-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "e922108f7bca55f2b877c32f4a57f04cb1b1841dffeedd274bd90615637de44bab0e3df5de0f10495a26ac7284fcff2ad9080347019c0f9ec0d74453e186f387",
+          "size": 39648,
+          "casKey": "v11/files/e9/e922108f7bca55f2b877c32f4a57f04cb1b1841dffeedd274bd90615637de44bab0e3df5de0f10495a26ac7284fcff2ad9080347019c0f9ec0d74453e186f387-exec",
+          "url": "https://github.com/awesome-os/dotnet/releases/download/v0.1.0/dotnet-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/dotnet/dotnet-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "0ad6e546167c936152decfb4a571f725d79745898403aa6f5b61af3123da0668266857e90b4139c6c44fe7bd389896e8cfc3d92b383fca0e2f9befad0f653d8b",
+          "size": 52368,
+          "casKey": "v11/files/0a/0ad6e546167c936152decfb4a571f725d79745898403aa6f5b61af3123da0668266857e90b4139c6c44fe7bd389896e8cfc3d92b383fca0e2f9befad0f653d8b-exec",
+          "url": "https://github.com/awesome-os/dotnet/releases/download/v0.1.0/dotnet-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/dotnet/dotnet.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "f51adc4162add24b9c121f1386c7bb4839078584a81342b4ae5916b727878426867405f6efa8e376c8e2458b3e64a3307a74fda2528b75540ae3939ac059ce41",
+          "size": 26112,
+          "casKey": "v11/files/f5/f51adc4162add24b9c121f1386c7bb4839078584a81342b4ae5916b727878426867405f6efa8e376c8e2458b3e64a3307a74fda2528b75540ae3939ac059ce41-exec",
+          "url": "https://github.com/awesome-os/dotnet/releases/download/v0.1.0/dotnet.exe"
+        },
+        "wasm32-wasi": {
+          "id": "awesome-os/dotnet/dotnet.wasm",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "4fdb516b4581ae9a9bea0cfc5ec074e29e8d306ed619e5df38b180c37cbf743a9b57d4e171eb95aa97ae174b6148f254e1d9360b95ca341d30f93da75c1cc36c",
+          "size": 36588,
+          "casKey": "v11/files/4f/4fdb516b4581ae9a9bea0cfc5ec074e29e8d306ed619e5df38b180c37cbf743a9b57d4e171eb95aa97ae174b6148f254e1d9360b95ca341d30f93da75c1cc36c-exec",
+          "url": "https://github.com/awesome-os/dotnet/releases/download/v0.1.0/dotnet.wasm"
+        }
+      }
+    },
+    "powershell": {
+      "name": "powershell",
+      "binary": "pwsh",
+      "repo": "awesome-os/powershell",
+      "category": "cli",
+      "lockfileVersion": "v0.1.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "wasmModule": {
+        "id": "awesome-os/powershell/pwsh.wasm",
+        "kind": "ghost-launcher",
+        "version": "v0.1.0",
+        "sha512": "8e3443b4d0556d6ab4bb98c9e76d6742890b406081b89fa2974e3ef3a671016b41efccf97a013451546afd70a71de146dd1a9639a9f85f959820c6ff2e8536f6",
+        "size": 36683,
+        "casKey": "v11/files/8e/8e3443b4d0556d6ab4bb98c9e76d6742890b406081b89fa2974e3ef3a671016b41efccf97a013451546afd70a71de146dd1a9639a9f85f959820c6ff2e8536f6-exec",
+        "url": "https://github.com/awesome-os/powershell/releases/download/v0.1.0/pwsh.wasm"
+      },
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/powershell/pwsh-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "f6dd534bb388fe71e482532c4ebb89279b01c99c29e8794f067f63d5daf79640a6eb4072f94ced2e1c8205e92c34a3453ba23b7fa9004e1003316c5edbde354d",
+          "size": 45408,
+          "casKey": "v11/files/f6/f6dd534bb388fe71e482532c4ebb89279b01c99c29e8794f067f63d5daf79640a6eb4072f94ced2e1c8205e92c34a3453ba23b7fa9004e1003316c5edbde354d-exec",
+          "url": "https://github.com/awesome-os/powershell/releases/download/v0.1.0/pwsh-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/powershell/pwsh-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "474e97286d717046df22836693e79fbe4200fdd82daa5b754fae15cdac3c579ffc315a83fa8ccb59289a881bf50d609c5adbd528806e1a8af2ca1eaec751f8b7",
+          "size": 37584,
+          "casKey": "v11/files/47/474e97286d717046df22836693e79fbe4200fdd82daa5b754fae15cdac3c579ffc315a83fa8ccb59289a881bf50d609c5adbd528806e1a8af2ca1eaec751f8b7-exec",
+          "url": "https://github.com/awesome-os/powershell/releases/download/v0.1.0/pwsh-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/powershell/pwsh-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "342c6dad8c05b082f8b35157f631ea6b5a9c367cb2280a36fef62016275835ea73acb9048578726b49c0650f3acfe32b5ccb120b565404f3265c9f3c7a0b9b60",
+          "size": 52192,
+          "casKey": "v11/files/34/342c6dad8c05b082f8b35157f631ea6b5a9c367cb2280a36fef62016275835ea73acb9048578726b49c0650f3acfe32b5ccb120b565404f3265c9f3c7a0b9b60-exec",
+          "url": "https://github.com/awesome-os/powershell/releases/download/v0.1.0/pwsh-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/powershell/pwsh.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "85b6a8ffb28d1407534054ed1f03158c1c14211710df3fa82fec0154cd6379850cb8e2daae89540047da2b6ebe6aa1bd98dc1e3ffb11f2732accc0c59a1e5d23",
+          "size": 25600,
+          "casKey": "v11/files/85/85b6a8ffb28d1407534054ed1f03158c1c14211710df3fa82fec0154cd6379850cb8e2daae89540047da2b6ebe6aa1bd98dc1e3ffb11f2732accc0c59a1e5d23-exec",
+          "url": "https://github.com/awesome-os/powershell/releases/download/v0.1.0/pwsh.exe"
+        },
+        "wasm32-wasi": {
+          "id": "awesome-os/powershell/pwsh.wasm",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "8e3443b4d0556d6ab4bb98c9e76d6742890b406081b89fa2974e3ef3a671016b41efccf97a013451546afd70a71de146dd1a9639a9f85f959820c6ff2e8536f6",
+          "size": 36683,
+          "casKey": "v11/files/8e/8e3443b4d0556d6ab4bb98c9e76d6742890b406081b89fa2974e3ef3a671016b41efccf97a013451546afd70a71de146dd1a9639a9f85f959820c6ff2e8536f6-exec",
+          "url": "https://github.com/awesome-os/powershell/releases/download/v0.1.0/pwsh.wasm"
+        }
+      }
+    },
+    "lo": {
+      "name": "lo",
+      "binary": "lo",
+      "repo": "awesome-os/lo",
+      "category": "cli",
+      "lockfileVersion": "v0.1.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/lo/lo-linux-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "422c366091f40e45c7d01cea9cb193c4c4dcaf5126cf777fef0f5c87df3daea294f8bb4b40c4b562530b8dd19fde6ec62d7e767b208ec97916fe4aba053438ca",
+          "size": 34040,
+          "casKey": "v11/files/42/422c366091f40e45c7d01cea9cb193c4c4dcaf5126cf777fef0f5c87df3daea294f8bb4b40c4b562530b8dd19fde6ec62d7e767b208ec97916fe4aba053438ca-exec",
+          "url": "https://github.com/awesome-os/lo/releases/download/v0.1.0/lo-linux-arm64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/lo/lo-linux-x64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "d7911ea1cd04186eacd4e86f13a142322db694b2b2278e619d8eae5c829aeae5e77d798dfb0a34c3ce8effdb0d22f1cf317b275740f10ca521c7c0d2aee070a7",
+          "size": 27608,
+          "casKey": "v11/files/d7/d7911ea1cd04186eacd4e86f13a142322db694b2b2278e619d8eae5c829aeae5e77d798dfb0a34c3ce8effdb0d22f1cf317b275740f10ca521c7c0d2aee070a7-exec",
+          "url": "https://github.com/awesome-os/lo/releases/download/v0.1.0/lo-linux-x64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/lo/lo-macos-arm64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "4cf6c8805e5b103d5048d7da0d4a4812d5d3c969714f35b980328032614760e0149d38132de90234f94bc4199b360f99fe6fd4638e9e185e17cdc8b8a4c5a196",
+          "size": 50528,
+          "casKey": "v11/files/4c/4cf6c8805e5b103d5048d7da0d4a4812d5d3c969714f35b980328032614760e0149d38132de90234f94bc4199b360f99fe6fd4638e9e185e17cdc8b8a4c5a196-exec",
+          "url": "https://github.com/awesome-os/lo/releases/download/v0.1.0/lo-macos-arm64"
+        },
+        "win64": {
+          "id": "awesome-os/lo/lo.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "2a0ef835abaf740e16b63086ad2496e49b8661b138e36130830c21ee2bce82ad4dec2b81b56e98e5b33f672a086c92e78f19d305d295065a1acaa84bef9e5d39",
+          "size": 19968,
+          "casKey": "v11/files/2a/2a0ef835abaf740e16b63086ad2496e49b8661b138e36130830c21ee2bce82ad4dec2b81b56e98e5b33f672a086c92e78f19d305d295065a1acaa84bef9e5d39-exec",
+          "url": "https://github.com/awesome-os/lo/releases/download/v0.1.0/lo.exe"
+        }
+      }
+    },
+    "holo-pm": {
+      "name": "holo-pm",
+      "binary": "holo-pm",
+      "repo": "awesome-os/holo-pm",
+      "category": "cli",
+      "lockfileVersion": "v0.1.0",
+      "wasiHostCore": {
+        "id": "awesome-os/wasi-host/holo-wasi-host-b8g.wasm",
+        "version": "v0.2.0",
+        "casKey": "v11/files/56/56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc-exec",
+        "sha512": "56a22289ceede361bc6a06779ab95196fdf9e7bd61bd0984b73c4c5dd81d2f7c64d7fa730a11e4c6277f91d233873eceafd8d9441326e41e8854f2f8ddb82adc"
+      },
+      "stampStrategy": "hardlink-0byte",
+      "casKeys": {
+        "linux-arm64": {
+          "id": "awesome-os/holo-pm/holo-pm-linux-aarch64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "13ed1afa66ee1cb0c1bd8ba887fadf2d70191cf735805b89f0cb72851ee4a058daece8d13c3bc4afc7226800b74ff3812b6bf202d6dbe6af7e4c8e3c65cf13ef",
+          "size": 7352,
+          "casKey": "v11/files/13/13ed1afa66ee1cb0c1bd8ba887fadf2d70191cf735805b89f0cb72851ee4a058daece8d13c3bc4afc7226800b74ff3812b6bf202d6dbe6af7e4c8e3c65cf13ef-exec",
+          "url": "https://github.com/awesome-os/holo-pm/releases/download/v0.1.0/holo-pm-linux-aarch64"
+        },
+        "linux-x64": {
+          "id": "awesome-os/holo-pm/holo-pm-linux-x86_64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "2bdad50caa4062674f32979a492c6f5a64f9aebdc8c67cddec129a80563623c2717bb87ffb69125e93b1693a5de5845db404af62412b75edd53ea78c37cd1dc8",
+          "size": 7176,
+          "casKey": "v11/files/2b/2bdad50caa4062674f32979a492c6f5a64f9aebdc8c67cddec129a80563623c2717bb87ffb69125e93b1693a5de5845db404af62412b75edd53ea78c37cd1dc8-exec",
+          "url": "https://github.com/awesome-os/holo-pm/releases/download/v0.1.0/holo-pm-linux-x86_64"
+        },
+        "macos-arm64": {
+          "id": "awesome-os/holo-pm/holo-pm-macos-aarch64",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "a82696f994998f8fc02f12fd5772b65190ba408f5da06b3364a0e3284c0b7983219d90c8b40e3b5c08c584d0baa466e49a69389ebe0d76bf3710a1f252866bbc",
+          "size": 51176,
+          "casKey": "v11/files/a8/a82696f994998f8fc02f12fd5772b65190ba408f5da06b3364a0e3284c0b7983219d90c8b40e3b5c08c584d0baa466e49a69389ebe0d76bf3710a1f252866bbc-exec",
+          "url": "https://github.com/awesome-os/holo-pm/releases/download/v0.1.0/holo-pm-macos-aarch64"
+        },
+        "win64": {
+          "id": "awesome-os/holo-pm/holo-pm-windows-x86_64.exe",
+          "kind": "ghost-launcher",
+          "version": "v0.1.0",
+          "sha512": "1dbc3ee65bd0937565031a144c96b4dab20c56b3def3795780b74ca953817a35df87e5d8768e12b4dd663c939bbc027e3122e7042b9b9e24514f648c5b85bf25",
+          "size": 20480,
+          "casKey": "v11/files/1d/1dbc3ee65bd0937565031a144c96b4dab20c56b3def3795780b74ca953817a35df87e5d8768e12b4dd663c939bbc027e3122e7042b9b9e24514f648c5b85bf25-exec",
+          "url": "https://github.com/awesome-os/holo-pm/releases/download/v0.1.0/holo-pm-windows-x86_64.exe"
+        }
+      }
+    }
+  }
+}
