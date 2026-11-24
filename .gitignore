@@ -11,9 +11,10 @@ out/
 *.dylib
 *.exe
 *.pdb
-wasi-host
-wasi-host-*
-wasi_host_test*
+/wasi-host
+/wasi-host-*
+/wasi_host_test
+/wasi_host_test.exe
 
 # Checksums & caches
 SHA256SUMS.txt
