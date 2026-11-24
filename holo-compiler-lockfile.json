@@ -1,0 +1,156 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/wasi-host",
+  "targets": [
+    "wasm32-wasi"
+  ],
+  "generatedAt": "2026-11-24T22:10:16.316Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/wasi-host/libwasi_host.h",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "1c9052b8300840c80983957035011011221bb6c6a18a435bc0fabba2fd72b1974fcf6a2c35bcac1230c526bf9b521b296e537b43c0458630356bc0607704b64f",
+      "size": 4802,
+      "executable": false,
+      "blob": "v11/files/1c/1c9052b8300840c80983957035011011221bb6c6a18a435bc0fabba2fd72b1974fcf6a2c35bcac1230c526bf9b521b296e537b43c0458630356bc0607704b64f",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/libwasi_host.h",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/libwasi_host.lib",
+      "kind": "lib",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "f7e3a995e6525a51088d526daf678becee133c21164f39d7d7e49eb100c7befda0e587fda3bef4d0c10bed62b0c591c0c6b9f6495f1ad7289a43602b0f52bd59",
+      "size": 3854,
+      "executable": false,
+      "blob": "v11/files/f7/f7e3a995e6525a51088d526daf678becee133c21164f39d7d7e49eb100c7befda0e587fda3bef4d0c10bed62b0c591c0c6b9f6495f1ad7289a43602b0f52bd59",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/libwasi_host.lib",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/libwasi-host-darwin-arm64.dylib",
+      "kind": "lib",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "18de44d063e85b0691c5f3e3032bc88cdde048fd13215ae8c3b844d40a9e1d4c03607d0bb25fd3cc3ccc0442dd0029e3937877ca3056050fd399e83ff5c64d6f",
+      "size": 50976,
+      "executable": false,
+      "blob": "v11/files/18/18de44d063e85b0691c5f3e3032bc88cdde048fd13215ae8c3b844d40a9e1d4c03607d0bb25fd3cc3ccc0442dd0029e3937877ca3056050fd399e83ff5c64d6f",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/libwasi-host-darwin-arm64.dylib",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/libwasi-host-linux-arm64.so",
+      "kind": "lib",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "4f927746acbd56a249631943076d11b71e0ab8a9742623f543f93c19cf3b18a3de55fc8d4341df6df1c62baca0ce78bf54a4721efa16fbed2b07f29459fe5eb5",
+      "size": 6600,
+      "executable": false,
+      "blob": "v11/files/4f/4f927746acbd56a249631943076d11b71e0ab8a9742623f543f93c19cf3b18a3de55fc8d4341df6df1c62baca0ce78bf54a4721efa16fbed2b07f29459fe5eb5",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/libwasi-host-linux-arm64.so",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/libwasi-host-linux-x64.so",
+      "kind": "lib",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "4f4cf50226689cac70fc2094828191d07f44cf567394bbd1c3643ce65606d58e50a52e0ea5f0b25e45e068f8820496a2c7edf334bcc4b0537aa27aabefc01a76",
+      "size": 6520,
+      "executable": false,
+      "blob": "v11/files/4f/4f4cf50226689cac70fc2094828191d07f44cf567394bbd1c3643ce65606d58e50a52e0ea5f0b25e45e068f8820496a2c7edf334bcc4b0537aa27aabefc01a76",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/libwasi-host-linux-x64.so",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/libwasi-host-windows-x64.dll",
+      "kind": "lib",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "99a63e8106fc6d6d45f97988a5e3a371d7f416ba3dbc0a17a8778b29e84ad095ce27dc5315fa6e75afb26c9c06baff50dd976dba1fed8282a3f5f619e5c4b043",
+      "size": 18944,
+      "executable": false,
+      "blob": "v11/files/99/99a63e8106fc6d6d45f97988a5e3a371d7f416ba3dbc0a17a8778b29e84ad095ce27dc5315fa6e75afb26c9c06baff50dd976dba1fed8282a3f5f619e5c4b043",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/libwasi-host-windows-x64.dll",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "ec98822553f46f350d305c2148d42048d45c3ac40dc852b32bd2536571ad4333a59da9a19bf089441b789e7dac9b4a55dec10b34feade6dd1103feb819a6c3c9",
+      "size": 898,
+      "executable": false,
+      "blob": "v11/files/ec/ec98822553f46f350d305c2148d42048d45c3ac40dc852b32bd2536571ad4333a59da9a19bf089441b789e7dac9b4a55dec10b34feade6dd1103feb819a6c3c9",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/SHA256SUMS.txt",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/SHA512SUMS.txt",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "60f1e51a2765cf3acda94c4cb6c0fe283a79ec4e38b16c0ed13c4eb59f9da6811ff2a3b1fc715d450435d8aa0ac5f70feed4b240d92d8d287336c54b557c7714",
+      "size": 1538,
+      "executable": false,
+      "blob": "v11/files/60/60f1e51a2765cf3acda94c4cb6c0fe283a79ec4e38b16c0ed13c4eb59f9da6811ff2a3b1fc715d450435d8aa0ac5f70feed4b240d92d8d287336c54b557c7714",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/SHA512SUMS.txt",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/wasi-host-darwin-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "a12f03b968dd50cd10eddbe3397d1f586165343052ff632d71e12d60f842b0858180c72c533a2836182833c02ee7a282fd4f020b00d8d3eec5a7fb4b923960d8",
+      "size": 51784,
+      "executable": true,
+      "blob": "v11/files/a1/a12f03b968dd50cd10eddbe3397d1f586165343052ff632d71e12d60f842b0858180c72c533a2836182833c02ee7a282fd4f020b00d8d3eec5a7fb4b923960d8-exec",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/wasi-host-darwin-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/wasi-host-linux-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "df0b49f05751847dfdff305d3f5d5291af9d7d8c123f05d07d9663502342657923bb9d6fcd21067709831ab391a6b08b91f5f8e42a3e7c33d018cb1aaee52a35",
+      "size": 41048,
+      "executable": true,
+      "blob": "v11/files/df/df0b49f05751847dfdff305d3f5d5291af9d7d8c123f05d07d9663502342657923bb9d6fcd21067709831ab391a6b08b91f5f8e42a3e7c33d018cb1aaee52a35-exec",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/wasi-host-linux-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/wasi-host-linux-x64",
+      "kind": "ghost-launcher",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "1113beec49f7fe415e44787362dc7686d17954d201f70f3a05a595c63c9fd6ba4347e2cc19822e283fc08c24d64ea30df48b5d793adc9eefb00f4b79de587d66",
+      "size": 34416,
+      "executable": true,
+      "blob": "v11/files/11/1113beec49f7fe415e44787362dc7686d17954d201f70f3a05a595c63c9fd6ba4347e2cc19822e283fc08c24d64ea30df48b5d793adc9eefb00f4b79de587d66-exec",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/wasi-host-linux-x64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/wasi-host/wasi-host-windows-x64.exe",
+      "kind": "ghost-launcher",
+      "version": "v0.1.0",
+      "target": "wasm32-wasi",
+      "sha512": "1736d5dbfe305ac76514c197b2ed5f5fddee86cee281f49bbbf59812d3682387bd5420487d79c29a16e5bc24ec62902945b42e389585d672be79ffb42315fdfc",
+      "size": 24064,
+      "executable": true,
+      "blob": "v11/files/17/1736d5dbfe305ac76514c197b2ed5f5fddee86cee281f49bbbf59812d3682387bd5420487d79c29a16e5bc24ec62902945b42e389585d672be79ffb42315fdfc-exec",
+      "url": "https://github.com/awesome-os/wasi-host/releases/download/v0.1.0/wasi-host-windows-x64.exe",
+      "dependencies": []
+    }
+  ]
+}

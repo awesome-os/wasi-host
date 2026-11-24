@@ -194,9 +194,11 @@ B8G_WASI_HOST_API int b8g_wasi_host_extract_app_name(const char* argv0, char* ou
         return B8G_WASI_HOST_OK;
     }
 
-    /* Direct invocation as "wasi-host" or "wasi-host-<os>-<arch>" yields "". */
+    /* Direct invocation as "wasi-host", "holo-wasi-host", or "<prefix>-<os>-<arch>" yields "". */
     if ((len == 9 && ascii_ncasecmp(base, "wasi-host", 9) == 0) ||
-        (len > 10 && ascii_ncasecmp(base, "wasi-host-", 10) == 0)) {
+        (len > 10 && ascii_ncasecmp(base, "wasi-host-", 10) == 0) ||
+        (len == 14 && ascii_ncasecmp(base, "holo-wasi-host", 14) == 0) ||
+        (len > 15 && ascii_ncasecmp(base, "holo-wasi-host-", 15) == 0)) {
         out[0] = '\0';
         return B8G_WASI_HOST_OK;
     }

@@ -25,7 +25,7 @@ jobs:
         with:
           version: 0.14.1
 
-      - name: Compile 4-OS wasi-host + libwasi-host artifacts
+      - name: Compile 4-OS holo-wasi-host + libwasi-host + universal holo-wasi-host-b8g.wasm
         run: |
           set -euo pipefail
           mkdir -p dist
@@ -34,7 +34,8 @@ jobs:
           # 1. Windows x64 (x86_64-windows-gnu)
           zig cc -target x86_64-windows-gnu $CFLAGS \
             src/libwasi_host.c src/wasi_host.c \
-            -o dist/wasi-host-windows-x64.exe
+            -o dist/holo-wasi-host-windows-x64.exe
+          cp dist/holo-wasi-host-windows-x64.exe dist/wasi-host-windows-x64.exe
           zig cc -target x86_64-windows-gnu $CFLAGS -shared -DB8G_WASI_HOST_BUILD_DLL \
             src/libwasi_host.c \
             -o dist/libwasi-host-windows-x64.dll
@@ -42,7 +43,8 @@ jobs:
           # 2. Linux x64 (x86_64-linux-musl)
           zig cc -target x86_64-linux-musl $CFLAGS \
             src/libwasi_host.c src/wasi_host.c \
-            -o dist/wasi-host-linux-x64
+            -o dist/holo-wasi-host-linux-x64
+          cp dist/holo-wasi-host-linux-x64 dist/wasi-host-linux-x64
           zig cc -target x86_64-linux-musl $CFLAGS -fPIC -shared \
             src/libwasi_host.c \
             -o dist/libwasi-host-linux-x64.so
@@ -50,7 +52,8 @@ jobs:
           # 3. Linux arm64 (aarch64-linux-musl)
           zig cc -target aarch64-linux-musl $CFLAGS \
             src/libwasi_host.c src/wasi_host.c \
-            -o dist/wasi-host-linux-arm64
+            -o dist/holo-wasi-host-linux-arm64
+          cp dist/holo-wasi-host-linux-arm64 dist/wasi-host-linux-arm64
           zig cc -target aarch64-linux-musl $CFLAGS -fPIC -shared \
             src/libwasi_host.c \
             -o dist/libwasi-host-linux-arm64.so
@@ -58,10 +61,20 @@ jobs:
           # 4. macOS arm64 (aarch64-macos)
           zig cc -target aarch64-macos $CFLAGS \
             src/libwasi_host.c src/wasi_host.c \
-            -o dist/wasi-host-darwin-arm64
+            -o dist/holo-wasi-host-darwin-arm64
+          cp dist/holo-wasi-host-darwin-arm64 dist/wasi-host-darwin-arm64
           zig cc -target aarch64-macos $CFLAGS -fPIC -shared \
             src/libwasi_host.c \
             -o dist/libwasi-host-darwin-arm64.dylib
+
+          # 5. Universal portable wasm32-wasi core
+          zig cc -target wasm32-wasi -Os -s -std=c11 -Wall -Wextra -Werror \
+            src/holo_wasi_host_b8g.c \
+            -o dist/holo-wasi-host-b8g.wasm
+
+          # Verify WebAssembly header (\0asm\1\0\0\0)
+          WASM_HDR=$(od -An -tx1 -N8 dist/holo-wasi-host-b8g.wasm | tr -d ' \n')
+          test "$WASM_HDR" = "0061736d01000000"
 
           # Public C11 ABI header
           cp include/libwasi_host.h dist/libwasi_host.h
@@ -74,7 +87,8 @@ jobs:
           zig cc -target x86_64-linux-musl -std=c11 -D_POSIX_C_SOURCE=200809L -Os -s -Wall -Wextra -Werror \
             -Iinclude src/libwasi_host.c src/wasi_host_test.c \
             -o /tmp/wasi_host_test
-          chmod +x dist/wasi-host-linux-x64 /tmp/wasi_host_test
+          chmod +x dist/holo-wasi-host-linux-x64 dist/wasi-host-linux-x64 /tmp/wasi_host_test
+          /tmp/wasi_host_test dist/holo-wasi-host-linux-x64
           /tmp/wasi_host_test dist/wasi-host-linux-x64
 
       - name: Generate SHA256SUMS.txt & SHA512SUMS.txt
@@ -98,6 +112,6 @@ jobs:
             gh release upload "$TAG" dist/* --clobber
           else
             gh release create "$TAG" dist/* \
-              --title "wasi-host ${TAG}" \
-              --notes "Universal single \`wasi-host-<os>-<arch>\` + \`libwasi-host\` (\`B8G_ABI_MAGIC_V3\`, \`0x33564742\`) launcher & 0-byte v11 CAS hardlink stamper across Windows x64, Linux x64/arm64 (musl), and macOS arm64. Verified with native C11 \`wasi_host_test\` suite."
+              --title "holo-wasi-host ${TAG}" \
+              --notes "Universal 4-OS native \`holo-wasi-host-<os>-<arch>\` (+ backwards-compatible \`wasi-host-<os>-<arch>\` aliases) + \`libwasi-host\` + single universal portable \`holo-wasi-host-b8g.wasm\` (\`wasm32-wasi\`, \`B8G_ABI_MAGIC_V3\`, \`0x33564742\`, v11 CAS). Verified with native C11 \`wasi_host_test\` suite and WebAssembly header check."
           fi
