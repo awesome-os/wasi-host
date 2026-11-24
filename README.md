@@ -67,3 +67,20 @@ New-Item -ItemType Directory -Force -Path $tmp | Out-Null
 
 & "$tmp\wasi_host_test.exe" "$tmp\holo-wasi-host-windows-x64.exe"
 ```
+
+## Quick Install & Run (Windows / Linux / macOS)
+
+```powershell
+# Windows (PowerShell) — 1-line install & run
+irm https://github.com/awesome-os/wasi-host/releases/latest/download/wasi-host-windows-x64.exe -OutFile "wasi-host.exe"; .\wasi-host.exe --version
+```
+
+```sh
+# Linux (x64) — 1-line install & run
+curl -fsSL https://github.com/awesome-os/wasi-host/releases/latest/download/wasi-host-linux-x64 -o "wasi-host" && chmod +x "wasi-host" && ./wasi-host --version
+```
+
+```sh
+# macOS (Apple Silicon) — 1-line install & run
+curl -fsSL https://github.com/awesome-os/wasi-host/releases/latest/download/wasi-host-darwin-arm64 -o "wasi-host" && chmod +x "wasi-host" && ./wasi-host --version
+```
