@@ -1,0 +1,22 @@
+# Build outputs
+dist/
+build/
+out/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.pdb
+wasi-host
+wasi-host-*
+wasi_host_test*
+
+# Checksums & caches
+SHA256SUMS.txt
+SHA512SUMS.txt
+.zig-cache/
+zig-out/

@@ -1,0 +1,103 @@
+name: Release wasi-host
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-test-release:
+    name: Build 4-OS binaries, test C11 suite & release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Zig
+        uses: mlugg/setup-zig@v2
+        with:
+          version: 0.14.1
+
+      - name: Compile 4-OS wasi-host + libwasi-host artifacts
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          CFLAGS="-std=c11 -Os -s -Wall -Wextra -Werror -Iinclude"
+
+          # 1. Windows x64 (x86_64-windows-gnu)
+          zig cc -target x86_64-windows-gnu $CFLAGS \
+            src/libwasi_host.c src/wasi_host.c \
+            -o dist/wasi-host-windows-x64.exe
+          zig cc -target x86_64-windows-gnu $CFLAGS -shared -DB8G_WASI_HOST_BUILD_DLL \
+            src/libwasi_host.c \
+            -o dist/libwasi-host-windows-x64.dll
+
+          # 2. Linux x64 (x86_64-linux-musl)
+          zig cc -target x86_64-linux-musl $CFLAGS \
+            src/libwasi_host.c src/wasi_host.c \
+            -o dist/wasi-host-linux-x64
+          zig cc -target x86_64-linux-musl $CFLAGS -fPIC -shared \
+            src/libwasi_host.c \
+            -o dist/libwasi-host-linux-x64.so
+
+          # 3. Linux arm64 (aarch64-linux-musl)
+          zig cc -target aarch64-linux-musl $CFLAGS \
+            src/libwasi_host.c src/wasi_host.c \
+            -o dist/wasi-host-linux-arm64
+          zig cc -target aarch64-linux-musl $CFLAGS -fPIC -shared \
+            src/libwasi_host.c \
+            -o dist/libwasi-host-linux-arm64.so
+
+          # 4. macOS arm64 (aarch64-macos)
+          zig cc -target aarch64-macos $CFLAGS \
+            src/libwasi_host.c src/wasi_host.c \
+            -o dist/wasi-host-darwin-arm64
+          zig cc -target aarch64-macos $CFLAGS -fPIC -shared \
+            src/libwasi_host.c \
+            -o dist/libwasi-host-darwin-arm64.dylib
+
+          # Public C11 ABI header
+          cp include/libwasi_host.h dist/libwasi_host.h
+
+          ls -lh dist/
+
+      - name: Build and run Linux native C11 test suite (wasi_host_test)
+        run: |
+          set -euo pipefail
+          zig cc -target x86_64-linux-musl -std=c11 -D_POSIX_C_SOURCE=200809L -Os -s -Wall -Wextra -Werror \
+            -Iinclude src/libwasi_host.c src/wasi_host_test.c \
+            -o /tmp/wasi_host_test
+          chmod +x dist/wasi-host-linux-x64 /tmp/wasi_host_test
+          /tmp/wasi_host_test dist/wasi-host-linux-x64
+
+      - name: Generate SHA256SUMS.txt & SHA512SUMS.txt
+        run: |
+          set -euo pipefail
+          cd dist
+          mapfile -t FILES < <(find . -maxdepth 1 -type f ! -name 'SHA*SUMS.txt' -printf '%f\n' | sort)
+          sha256sum "${FILES[@]}" > SHA256SUMS.txt
+          sha512sum "${FILES[@]}" > SHA512SUMS.txt
+          cat SHA256SUMS.txt
+          cat SHA512SUMS.txt
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/* --clobber
+          else
+            gh release create "$TAG" dist/* \
+              --title "wasi-host ${TAG}" \
+              --notes "Universal single \`wasi-host-<os>-<arch>\` + \`libwasi-host\` (\`B8G_ABI_MAGIC_V3\`, \`0x33564742\`) launcher & 0-byte v11 CAS hardlink stamper across Windows x64, Linux x64/arm64 (musl), and macOS arm64. Verified with native C11 \`wasi_host_test\` suite."
+          fi
