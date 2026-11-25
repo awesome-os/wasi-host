@@ -70,17 +70,10 @@ New-Item -ItemType Directory -Force -Path $tmp | Out-Null
 
 ## Quick Install & Run (Windows / Linux / macOS)
 
-```powershell
-# Windows (PowerShell) — 1-line install & run
-irm https://github.com/awesome-os/wasi-host/releases/latest/download/wasi-host-windows-x64.exe -OutFile "wasi-host.exe"; .\wasi-host.exe --version
-```
-
 ```sh
-# Linux (x64) — 1-line install & run
-curl -fsSL https://github.com/awesome-os/wasi-host/releases/latest/download/wasi-host-linux-x64 -o "wasi-host" && chmod +x "wasi-host" && ./wasi-host --version
-```
+# Install / hydrate from v11 CAS via holo-pm
+holo-pm install repository://github.com/awesome-os/wasi-host@main
 
-```sh
-# macOS (Apple Silicon) — 1-line install & run
-curl -fsSL https://github.com/awesome-os/wasi-host/releases/latest/download/wasi-host-darwin-arm64 -o "wasi-host" && chmod +x "wasi-host" && ./wasi-host --version
+# Or project & run directly via holo-project (0-byte hardlink)
+holo-project "project://cpp/wasi-host?from=repository://github.com/awesome-os/wasi-host@main"
 ```
