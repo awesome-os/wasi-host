@@ -1,3 +1,6 @@
+> [!NOTE]
+> Consolidated into the unified Holo v11 monorepo at https://github.com/awesome-os/awesome-os (all existing v11 CAS release assets remain downloadable).
+
 # `holo-wasi-host` (`awesome-os/wasi-host`) — Universal WASI Host Launcher, `libwasi-host` & `holo-wasi-host-b8g.wasm`
 
 > **ABI Magic:** `B8G_WASI_HOST_ABI_MAGIC_V3` (`0x33564742`, `"B8GV3"`)  
